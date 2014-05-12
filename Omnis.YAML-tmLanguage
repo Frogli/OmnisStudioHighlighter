@@ -1,0 +1,70 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Omnis 
+scopeName: source.omnis
+fileTypes: [omnis]
+uuid: c9bbc41d-d7e5-4afc-98ac-95b2b7e354bd
+
+
+patterns:
+- include: '#repository'
+
+- include: '#keywords'
+- include: '#comments'
+- include: '#strings'
+- include: '#constants'
+- include: '#variables'
+- include: '#methods'
+
+- name: meta.method-call.omnis
+  comment: Variables like $PARAM1, $TM_SELECTION
+  match: \$([A-Za-z][A-Za-z0-9_]+)
+
+repository:
+  keywords:
+    patterns:
+    - name: keyword.control.omnis
+      comment: keywords of structures like if, else, while, for, etc
+      match: \b(End If|If|Else|While|Do method|Do|End While|For|from|to|step|End For|Calculate|as|Repeat|Until|Switch|End Switch|Default|Case|Break to end of Loop|)\b
+          
+  comments:
+    patterns:
+    - name: comment.block.omnis
+      begin: \;
+      end: \n
+      captures:
+        '0': {name: punctuation.definition.comment.omnis}
+
+    - name: constant.language.omnis
+      # Calculate myVar as
+      match: \#(NULL|SHIFT)
+
+  strings:
+    patterns:
+      - name: string.quoted.double.omnis
+        begin: \"
+        end: \"
+        beginCaptures:
+          '0': { name: punctuation.definition.string.begin.omnis }    
+        endCaptures:
+          '0': { name: punctuation.definition.string.end.omnis }
+        patterns:
+        - include: '#string_escaped_char'
+        - include: '#string_placeholder'
+        
+      - name: string.quoted.single.omnis
+        begin: \'
+        end: \'
+        beginCaptures:
+          '0': { name: punctuation.definition.string.begin.omnis }    
+        endCaptures:
+          '0': { name: punctuation.definition.string.end.omnis }
+        patterns:
+        - include: '#string_escaped_char'
+        - include: '#string_placeholder'  
+  
+  variables:
+    patterns:
+    - name: variable.language.omnis
+      match: \#[A-Z0-9]+
+...
