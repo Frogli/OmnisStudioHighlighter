@@ -85,7 +85,7 @@
 					<key>comment</key>
 					<string>keywords of structures like if, else, while, for, etc</string>
 					<key>match</key>
-					<string>\b(End If|If|Else|While|Do method|Do|End While|For|from|to|step|End For|Calculate|as|Repeat|Until|Switch|End Switch|Default|Case|Break to end of Loop|)\b</string>
+					<string>\b(End If|If|Else|While|Do method|Do|End While|For|from|to|step|End For|Calculate|as|Repeat|Until|Switch|End Switch|Default|Case|Break to end of Loop|^Text|Begin text block|End text block|Get text block|Sta|Begin statement|end statement|Get statement|Platform newline)\b</string>
 					<key>name</key>
 					<string>keyword.control.omnis</string>
 				</dict>

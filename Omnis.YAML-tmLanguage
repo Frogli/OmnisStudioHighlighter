@@ -25,7 +25,7 @@ repository:
     patterns:
     - name: keyword.control.omnis
       comment: keywords of structures like if, else, while, for, etc
-      match: \b(End If|If|Else|While|Do method|Do|End While|For|from|to|step|End For|Calculate|as|Repeat|Until|Switch|End Switch|Default|Case|Break to end of Loop|)\b
+      match: \b(End If|If|Else|While|Do method|Do|End While|For|from|to|step|End For|Calculate|as|Repeat|Until|Switch|End Switch|Default|Case|Break to end of Loop|^Text|Begin text block|End text block|Get text block|Sta|Begin statement|end statement|Get statement|Platform newline)\b
           
   comments:
     patterns:
