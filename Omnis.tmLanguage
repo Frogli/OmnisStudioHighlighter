@@ -87,7 +87,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\#(NULL|SHIFT)</string>
+					<string>\#(NULL|SHIFT)|(\bk[A-Z]{1}[A-Za-z0-9_]+)</string>
 					<key>name</key>
 					<string>constant.language.omnis</string>
 				</dict>
@@ -101,7 +101,7 @@
 					<key>comment</key>
 					<string>keywords of structures like if, else, while, for, etc</string>
 					<key>match</key>
-					<string>\b(End If|If|Else|While|Do method|Do|End While|For|from|to|step|End For|Calculate|as|Repeat|Until|Switch|End Switch|Default|Case|Break to end of Loop|^Text|Begin text block|End text block|Get text block|Sta|Begin statement|end statement|Get statement|Platform newline)|Working message|Send to trace log|\b</string>
+					<string>^[\s]*\b(as|Begin statement|Begin text block|Break to end of Loop|Break to end of loop|Calculate|Case|Default|Do method|Do|Else|End For|End If|end statement|End Switch|End text block|End While|For|from|Get statement|Get text block|Else If|JavaScript|Platform newline|Repeat|Send to trace log|Sta|step|Switch|Text|to|Until|While|Working message|Begin SQL script|Get SQL script|End SQL script|Execute SQL script|list lines|SQL|Fetch next row into|Build list)\b|\bstep|(as)\b|from|If</string>
 					<key>name</key>
 					<string>keyword.control.omnis</string>
 				</dict>

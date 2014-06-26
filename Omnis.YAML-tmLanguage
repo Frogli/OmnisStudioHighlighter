@@ -25,7 +25,7 @@ repository:
     patterns:
     - name: keyword.control.omnis
       comment: keywords of structures like if, else, while, for, etc
-      match: \b(End If|If|Else|While|Do method|Do|End While|For|from|to|step|End For|Calculate|as|Repeat|Until|Switch|End Switch|Default|Case|Break to end of Loop|^Text|Begin text block|End text block|Get text block|Sta|Begin statement|end statement|Get statement|Platform newline)|Working message|Send to trace log|\b
+      match: ^[\s]*\b(as|Begin statement|Begin text block|Break to end of Loop|Break to end of loop|Calculate|Case|Default|Do method|Do|Else|End For|End If|end statement|End Switch|End text block|End While|For|from|Get statement|Get text block|Else If|JavaScript|Platform newline|Repeat|Send to trace log|Sta|step|Switch|Text|to|Until|While|Working message|Begin SQL script|Get SQL script|End SQL script|Execute SQL script|list lines|SQL|Fetch next row into|Build list)\b|\bstep|(as)\b|from|If
           
   comments:
     patterns:
@@ -43,7 +43,7 @@ repository:
 
     - name: constant.language.omnis
       # Calculate myVar as
-      match: \#(NULL|SHIFT)
+      match: \#(NULL|SHIFT)|(\bk[A-Z]{1}[A-Za-z0-9_]+)
 
   strings:
     patterns:
