@@ -6,11 +6,12 @@ Sublime Text syntax highlighting for Omnis Studio
 ## Installation
 
 ### Package Control
-Easiest way is via the Package Control plugin. Which can be found at https://sublime.wbond.net. After installation of this plugin:
+Easiest way is via the Package Control package. Which can be found at https://sublime.wbond.net. After installation of this package:
 1. Click in the menubar on Tools > Command Palette
 2. Type 'Install' (without the quotes).
-3. Select PAc'ddddd
-'
+3. Select 'Package Control: Install Package'
+4. Type 'OmnisStudio' and select the line with OmnisStudioHighlighter
+
 ### Manual
 
 Clone the repository in your Sublime Text "Packages" directory:
