@@ -1,7 +1,7 @@
-sublime-omnisStudio
+OmnisStudioHighlighter
 ===============
 
-Sublime Text syntax highlighting for Omnis Studio
+Omnis Studio syntax highlighting for Sublime Text
 
 ## Installation
 
