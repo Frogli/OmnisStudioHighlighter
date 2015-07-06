@@ -55,7 +55,7 @@
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>^\;</string>
+					<string>^[\s]*\;</string>
 					<key>captures</key>
 					<dict>
 						<key>0</key>
@@ -101,7 +101,7 @@
 					<key>comment</key>
 					<string>keywords of structures like if, else, while, for, etc</string>
 					<key>match</key>
-					<string>^[\s]*\b(as|Begin statement|Begin text block|Break to end of Loop|Break to end of loop|Calculate|Case|Default|Do method|Do|Else|End For|End If|end statement|End Switch|End text block|End While|For|from|Get statement|Get text block|Else If|JavaScript|Platform newline|Repeat|Send to trace log|Sta|step|Switch|Text|to|Until|While|Working message|Begin SQL script|Get SQL script|End SQL script|Execute SQL script|list lines|SQL|Fetch next row into|Build list|Sta|Quit method|End statement)\b|\bstep|(as)\b|from|If|Returns</string>
+					<string>^[\s]*\b(as|Begin statement|Begin text block|Break to end of Loop|Break to end of loop|Calculate|Case|Default|Do method|Do|Else|End For|End If|end statement|End Switch|End text block|End While|For|from|Get statement|Get text block|Else If|JavaScript|Platform newline|Repeat|Send to trace log|Sta|step|Switch|Text|to|Until|While|Working message|Begin SQL script|Get SQL script|End SQL script|Execute SQL script|list lines|SQL|Fetch next row into|Build list|Sta|Quit method|End statement)\b|\bstep|\b(as)\b|from|If|Returns</string>
 					<key>name</key>
 					<string>keyword.control.omnis</string>
 				</dict>
