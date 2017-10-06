@@ -1,8 +1,8 @@
 # [PackageDev] target_format: plist, ext: tmLanguage
 ---
 name: Omnis 
-scopeName: source.omnis
-fileTypes: [omnis]
+scopeName: source.omh
+fileTypes: [omh,omnis]
 uuid: c9bbc41d-d7e5-4afc-98ac-95b2b7e354bd
 
 
@@ -16,61 +16,61 @@ patterns:
 - include: '#variables'
 - include: '#methods'
 
-- name: meta.method-call.omnis
+- name: meta.method-call.omh
   comment: Variables like $PARAM1, $TM_SELECTION
   match: \$([A-Za-z][A-Za-z0-9_]+)
 
 repository:
   keywords:
     patterns:
-    - name: keyword.control.omnis
+    - name: keyword.control.omh
       comment: keywords of structures like if, else, while, for, etc
       match: ^[\s]*\b(as|Begin statement|Begin text block|Break to end of Loop|Break to end of loop|Calculate|Case|Default|Do method|Do|Else|End For|End If|end statement|End Switch|End text block|End While|For|from|Get statement|Get text block|Else If|JavaScript|Platform newline|Repeat|Send to trace log|Sta|step|Switch|Text|to|Until|While|Working message|Begin SQL script|Get SQL script|End SQL script|Execute SQL script|list lines|SQL|Fetch next row into|Build list|Sta|Quit method|End statement)\b|\bstep|\b(as)\b|from|If|Returns
           
   comments:
     patterns:
-    - name: comment.block.omnis
+    - name: comment.block.omh
       begin: ^[\s]*\;
       end: \n
       captures:
-        '0': {name: punctuation.definition.comment.omnis}
+        '0': {name: punctuation.definition.comment.omh}
 
-    - name: comment.line.omnis
+    - name: comment.line.omh
       begin: \;\;
       end: \n
       captures:
-        '0': {name: punctuation.definition.comment.omnis}        
+        '0': {name: punctuation.definition.comment.omh}        
 
-    - name: constant.language.omnis
+    - name: constant.language.omh
       # Calculate myVar as
       match: \#(NULL|SHIFT)|(\bk[A-Z]{1}[A-Za-z0-9_]+)
 
   strings:
     patterns:
-      - name: string.quoted.double.omnis
+      - name: string.quoted.double.omh
         begin: \"
         end: \"
         beginCaptures:
-          '0': { name: punctuation.definition.string.begin.omnis }    
+          '0': { name: punctuation.definition.string.begin.omh }    
         endCaptures:
-          '0': { name: punctuation.definition.string.end.omnis }
+          '0': { name: punctuation.definition.string.end.omh }
         patterns:
         - include: '#string_escaped_char'
         - include: '#string_placeholder'
         
-      - name: string.quoted.single.omnis
+      - name: string.quoted.single.omh
         begin: \'
         end: \'
         beginCaptures:
-          '0': { name: punctuation.definition.string.begin.omnis }    
+          '0': { name: punctuation.definition.string.begin.omh }    
         endCaptures:
-          '0': { name: punctuation.definition.string.end.omnis }
+          '0': { name: punctuation.definition.string.end.omh }
         patterns:
         - include: '#string_escaped_char'
         - include: '#string_placeholder'  
   
   variables:
     patterns:
-    - name: variable.language.omnis
+    - name: variable.language.omh
       match: \#[A-Z0-9]+
 ...
