@@ -4,6 +4,7 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
+		<string>omh</string>
 		<string>omnis</string>
 	</array>
 	<key>name</key>
@@ -44,7 +45,7 @@
 			<key>match</key>
 			<string>\$([A-Za-z][A-Za-z0-9_]+)</string>
 			<key>name</key>
-			<string>meta.method-call.omnis</string>
+			<string>meta.method-call.omh</string>
 		</dict>
 	</array>
 	<key>repository</key>
@@ -61,13 +62,13 @@
 						<key>0</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.comment.omnis</string>
+							<string>punctuation.definition.comment.omh</string>
 						</dict>
 					</dict>
 					<key>end</key>
 					<string>\n</string>
 					<key>name</key>
-					<string>comment.block.omnis</string>
+					<string>comment.block.omh</string>
 				</dict>
 				<dict>
 					<key>begin</key>
@@ -77,19 +78,31 @@
 						<key>0</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.comment.omnis</string>
+							<string>punctuation.definition.comment.omh</string>
 						</dict>
 					</dict>
 					<key>end</key>
 					<string>\n</string>
 					<key>name</key>
-					<string>comment.line.omnis</string>
+					<string>comment.line.omh</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>\#(NULL|SHIFT)|(\bk[A-Z]{1}[A-Za-z0-9_]+)</string>
 					<key>name</key>
-					<string>constant.language.omnis</string>
+					<string>constant.language.omh</string>
+				</dict>
+			</array>
+		</dict>
+		<key>entities</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\$(cclass|cdata|cdevice|cfield|cinst|classes|clib|clibstartuptask|cmethod|cobj|codes|cparmcount|ctarget|ctask|cwind)</string>
+					<key>name</key>
+					<string>entity.name.function.omh</string>
 				</dict>
 			</array>
 		</dict>
@@ -98,12 +111,22 @@
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>comment</key>
-					<string>keywords of structures like if, else, while, for, etc</string>
 					<key>match</key>
-					<string>^[\s]*\b(as|Begin statement|Begin text block|Break to end of Loop|Break to end of loop|Calculate|Case|Default|Do method|Do|Else|End For|End If|end statement|End Switch|End text block|End While|For|from|Get statement|Get text block|Else If|JavaScript|Platform newline|Repeat|Send to trace log|Sta|step|Switch|Text|to|Until|While|Working message|Begin SQL script|Get SQL script|End SQL script|Execute SQL script|list lines|SQL|Fetch next row into|Build list|Sta|Quit method|End statement)\b|\bstep|\b(as)\b|from|If|Returns</string>
+					<string>^(Do method|Do)\s</string>
 					<key>name</key>
-					<string>keyword.control.omnis</string>
+					<string>keyword.control.omh</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\sReturns\s|\sReturns\n</string>
+					<key>name</key>
+					<string>keyword.control.omh</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>^(as|If|Begin statement|Begin text block|Break to end of Loop|Break to end of loop|Calculate|Case|Default|Else|End For|End If|end statement|End Switch|End text block|End While|For|from|Get statement|Get text block|Else If|JavaScript|Platform newline|Repeat|Send to trace log|Sta|step|Switch|Text|to|Until|While|Working message|Begin SQL script|Get SQL script|End SQL script|Execute SQL script|list lines|SQL|Fetch next row into|Build list|Sta|Quit method|End statement)\b|\bstep|\b(as)\b|from|</string>
+					<key>name</key>
+					<string>keyword.control.omh</string>
 				</dict>
 			</array>
 		</dict>
@@ -119,7 +142,7 @@
 						<key>0</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.begin.omnis</string>
+							<string>punctuation.definition.string.begin.omh</string>
 						</dict>
 					</dict>
 					<key>end</key>
@@ -129,11 +152,11 @@
 						<key>0</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.end.omnis</string>
+							<string>punctuation.definition.string.end.omh</string>
 						</dict>
 					</dict>
 					<key>name</key>
-					<string>string.quoted.double.omnis</string>
+					<string>string.quoted.double.omh</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -154,7 +177,7 @@
 						<key>0</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.begin.omnis</string>
+							<string>punctuation.definition.string.begin.omh</string>
 						</dict>
 					</dict>
 					<key>end</key>
@@ -164,11 +187,11 @@
 						<key>0</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.end.omnis</string>
+							<string>punctuation.definition.string.end.omh</string>
 						</dict>
 					</dict>
 					<key>name</key>
-					<string>string.quoted.single.omnis</string>
+					<string>string.quoted.single.omh</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -191,13 +214,13 @@
 					<key>match</key>
 					<string>\#[A-Z0-9]+</string>
 					<key>name</key>
-					<string>variable.language.omnis</string>
+					<string>variable.language.omh</string>
 				</dict>
 			</array>
 		</dict>
 	</dict>
 	<key>scopeName</key>
-	<string>source.omnis</string>
+	<string>source.omh</string>
 	<key>uuid</key>
 	<string>c9bbc41d-d7e5-4afc-98ac-95b2b7e354bd</string>
 </dict>
