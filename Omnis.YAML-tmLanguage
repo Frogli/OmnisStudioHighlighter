@@ -23,7 +23,7 @@ patterns:
 repository:
   keywords:
     patterns:
-    - match: ^(Do method|Do)\s
+    - match: ^(Do code method|Do method|Do)\s
       name: keyword.control.omh
     - match: \sReturns\s|\sReturns\n
       name: keyword.control.omh

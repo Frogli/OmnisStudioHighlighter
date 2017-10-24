@@ -112,7 +112,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>^(Do method|Do)\s</string>
+					<string>^(Do code method|Do method|Do)\s</string>
 					<key>name</key>
 					<string>keyword.control.omh</string>
 				</dict>
