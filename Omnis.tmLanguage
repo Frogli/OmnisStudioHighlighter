@@ -91,6 +91,7 @@
 					<string>\#(NULL|SHIFT)|(\bk[A-Z]{1}[A-Za-z0-9_]+)</string>
 					<key>name</key>
 					<string>constant.language.omh</string>
+<<<<<<< HEAD
 				</dict>
 			</array>
 		</dict>

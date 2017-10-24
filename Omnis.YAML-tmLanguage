@@ -23,6 +23,7 @@ patterns:
 repository:
   keywords:
     patterns:
+<<<<<<< HEAD
     - match: ^(Do code method|Do method|Do)\s
       name: keyword.control.omh
     - match: \sReturns\s|\sReturns\n
@@ -34,6 +35,11 @@ repository:
     patterns:
     - match: \$(cclass|cdata|cdevice|cfield|cinst|classes|clib|clibstartuptask|cmethod|cobj|codes|cparmcount|ctarget|ctask|cwind)
       name: entity.name.function.omh
+=======
+    - name: keyword.control.omh
+      comment: keywords of structures like if, else, while, for, etc
+      match: ^[\s]*\b(as|Begin statement|Begin text block|Break to end of Loop|Break to end of loop|Calculate|Case|Default|Do method|Do|Else|End For|End If|end statement|End Switch|End text block|End While|For|from|Get statement|Get text block|Else If|JavaScript|Platform newline|Repeat|Send to trace log|Sta|step|Switch|Text|to|Until|While|Working message|Begin SQL script|Get SQL script|End SQL script|Execute SQL script|list lines|SQL|Fetch next row into|Build list|Sta|Quit method|End statement)\b|\bstep|\b(as)\b|from|If|Returns
+>>>>>>> c8dd43c349ad34a0dbdf33a87bf466ace8ed1624
           
   comments:
     patterns:
