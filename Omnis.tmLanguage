@@ -94,33 +94,13 @@
 				</dict>
 			</array>
 		</dict>
-		<key>entities</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>\$(cclass|cdata|cdevice|cfield|cinst|classes|clib|clibstartuptask|cmethod|cobj|codes|cparmcount|ctarget|ctask|cwind)</string>
-					<key>name</key>
-					<string>entity.name.function.omh</string>
-				</dict>
-				<dict>
-					<key>comment</key>
-					<string>keywords of structures like if, else, while, for, etc</string>
-					<key>match</key>
-					<string>^[\s]*\b(as|Begin statement|Begin text block|Break to end of Loop|Break to end of loop|Calculate|Case|Default|Do method|Do|Else|End For|End If|end statement|End Switch|End text block|End While|For|from|Get statement|Get text block|Else If|JavaScript|Platform newline|Repeat|Send to trace log|Sta|step|Switch|Text|to|Until|While|Working message|Begin SQL script|Get SQL script|End SQL script|Execute SQL script|list lines|SQL|Fetch next row into|Build list|Sta|Quit method|End statement)\b|\bstep|\b(as)\b|from|If|Returns</string>
-					<key>name</key>
-					<string>keyword.control.omh</string>
-				</dict>
-			</array>
-		</dict>
 		<key>keywords</key>
 		<dict>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
-					<string>^(Do code method|Do method|Do)\s</string>
+					<string>^[\s]*(Do code method|Do method|Do)\s</string>
 					<key>name</key>
 					<string>keyword.control.omh</string>
 				</dict>
@@ -132,7 +112,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>^(as|If|Begin statement|Begin text block|Break to end of Loop|Break to end of loop|Calculate|Case|Default|Else|End For|End If|end statement|End Switch|End text block|End While|For|from|Get statement|Get text block|Else If|JavaScript|Platform newline|Repeat|Send to trace log|Sta|step|Switch|Text|to|Until|While|Working message|Begin SQL script|Get SQL script|End SQL script|Execute SQL script|list lines|SQL|Fetch next row into|Build list|Sta|Quit method|End statement)\b|\bstep|\b(as)\b|from|</string>
+					<string>^[\s]*(as|If|Begin statement|Begin text block|Break to end of Loop|Break to end of loop|Calculate|Case|Default|Else If|Else|End For|End If|end statement|End Switch|End text block|End While|For|from|Get statement|Get text block|JavaScript|Platform newline|Repeat|Send to trace log|Sta|step|Switch|Text|to|Until|While|Working message|Begin SQL script|Get SQL script|End SQL script|Execute SQL script|list lines|SQL|Fetch next row into|Build list|Sta|Quit method|End statement)\b|\bstep|\b(as)\b|from|On\s.*?\s</string>
 					<key>name</key>
 					<string>keyword.control.omh</string>
 				</dict>
@@ -220,7 +200,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\#[A-Z0-9]+</string>
+					<string>\#[A-Z0-9]+|\$c.*?\.</string>
 					<key>name</key>
 					<string>variable.language.omh</string>
 				</dict>
