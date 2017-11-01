@@ -1,0 +1,40 @@
+On evClick     ;; Event Parameters - pRow ( Itemreference )
+    Do method checkHttpObject
+    Do iHttp.$setsecureoptions()
+    If pos('MD5',iURIList.C1)
+        Do iHeaderList.$add("cookie","needed to make digest auth work with this server")
+        Do $cinst.$objs.tabpane.$objs.headersToSend.$redraw()
+    Else If pos("agenciatributaria.gob.es",iURIList.C1)
+        Do iHeaderList.$clear()
+        Do iHeaderList.$add("content-type","text/xml;charset=utf-8")
+        Do iHeaderList.$add("SOAPAction","")
+        Do $cinst.$objs.tabpane.$objs.headersToSend.$redraw()
+        If sys(6)='X'
+            Do iHttp.$setsecureoptions(kTrue,kTrue,"/Users/bmitchell/Downloads/STWS289/ws/39134665GPKCS12TODO.p12","","XXX1234")
+        Else If sys(6)='N'
+            Do iHttp.$setsecureoptions(kTrue,kTrue,"\\Mac\Home\Downloads\STWS289\ws\pubcert.pem","\\Mac\Home\Downloads\STWS289\ws\prvkey.pem","XXX1234")
+        Else
+            Do iHttp.$setsecureoptions(kTrue,kTrue,"/media/psf/AllFiles/work/dev/linux/xdev/bugs/pubcert.pem","/media/psf/AllFiles/work/dev/linux/xdev/bugs/prvkey.pem","XXX1234")
+        End If
+    Else If pos("postechotextplain",iURIList.C1)
+        Do iHeaderList.$clear()
+        Do iHeaderList.$add("content-type","text/plain")
+        Do $cinst.$objs.tabpane.$objs.headersToSend.$redraw()
+    Else If pos("testurlencoded",iURIList.C1)
+        Do iHeaderList.$clear()
+        Do iHeaderList.$add("content-type","application/x-www-form-urlencoded")
+        Do $cinst.$objs.tabpane.$objs.headersToSend.$redraw()
+    End If
+    ;  For testing
+    Do iHttp.$getsecureoptions(bVerifyPeer,bVerifyHost,cCertFile,cPrivKeyFile,cPrivKeyPassword)
+    Send to trace log {Secure options: [bVerifyPeer] [bVerifyHost] [cCertFile] [cPrivKeyFile] [cPrivKeyPassword]}
+
+
+Set reference iCallingInst to pCallingInst
+Open window instance wHTTP/CEN
+Calculate iURIList.$line as 1
+Calculate iURI as iURIList.C1
+
+    For counter from 1 to 20 step 1
+        Calculate temp as counter+1
+    End For

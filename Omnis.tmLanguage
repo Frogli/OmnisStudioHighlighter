@@ -112,9 +112,15 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>^[\s]*(as|If|Begin statement|Begin text block|Break to end of Loop|Break to end of loop|Calculate|Case|Default|Else If|Else|End For|End If|end statement|End Switch|End text block|End While|For|from|Get statement|Get text block|JavaScript|Platform newline|Repeat|Send to trace log|Sta|step|Switch|Text|to|Until|While|Working message|Begin SQL script|Get SQL script|End SQL script|Execute SQL script|list lines|SQL|Fetch next row into|Build list|Sta|Quit method|End statement)\b|\bstep|\b(as)\b|from|On\s.*?\s</string>
+					<string>^[\s]*(as|If|Begin statement|Begin text block|Break to end of Loop|Break to end of loop|Calculate|Case|Default|Else If|Else|End For|End If|end statement|End Switch|End text block|End While|For|from|Get statement|Get text block|JavaScript|Platform newline|Repeat|Send to trace log|Sta|step|Switch|Text|to|Until|While|Working message|Begin SQL script|Get SQL script|End SQL script|Execute SQL script|list lines|SQL|Fetch next row into|Build list|Sta|Quit method|End statement)\b|\bstep|\b(as)\b|from|On\s.*?\s|Set reference</string>
 					<key>name</key>
 					<string>keyword.control.omh</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>^[\s]*Open window instance</string>
+					<key>name</key>
+					<string>keyword.other.omh</string>
 				</dict>
 			</array>
 		</dict>
