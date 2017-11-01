@@ -15,12 +15,12 @@ Easiest way is via the Package Control package. Which can be found at https://pa
 
 ### Manual
 
-Clone the repository in your Sublime Text "Packages" directory:
+Clone the repository in your Sublime Text "Packages/User" directory:
 
     git clone https://github.com/Frogli/sublime-omnisStudio.git
 
 The "Packages" directory is located at:
 
-- OS X: ~/Library/Application Support/Sublime Text 3/Packages/
-- Linux: ~/.Sublime Text 3/Packages/
-- Windows: %APPDATA%/Sublime Text 3/Packages/
+- OS X: ~/Library/Application Support/Sublime Text 3/Packages/User
+- Linux: ~/.Sublime Text 3/Packages/User
+- Windows: %APPDATA%/Sublime Text 3/Packages/User
